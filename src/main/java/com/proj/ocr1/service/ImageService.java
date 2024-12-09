@@ -1,5 +1,6 @@
 package com.proj.ocr1.service;
 
+import com.proj.ocr1.utils.Algorithm;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
