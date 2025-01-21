@@ -827,22 +827,31 @@ public class OcrAlgorithm {
     }
 
     private boolean matchesPattern(BufferedImage image, int startX, int startY, int[][] pattern) {
-        for (int offsetY = 0; offsetY <= 5; offsetY++) {
-            for (int offsetX = 0; offsetX <= 5; offsetX++) {
-                boolean match = true;
-                for (int y = 0; y < pattern.length; y++) {
-                    for (int x = 0; x < pattern[y].length; x++) {
-                        int pixel = (image.getRGB(startX + x + offsetX, startY + y + offsetY) & 0xFF) == 0 ? 1 : 0;
-                        if (pixel != pattern[y][x]) {
-                            match = false;
-                            break;
-                        }
-                    }
-                    if (!match) break;
-                }
-                if (match) return true;
-            }
-        }
-        return false;
-    }
+      int imageWidth = image.getWidth();
+      int imageHeight = image.getHeight();
+  
+      for (int offsetY = 0; offsetY <= 11; offsetY++) {
+          for (int offsetX = 0; offsetX <= 11; offsetX++) {
+              boolean match = true;
+              for (int y = 0; y < pattern.length; y++) {
+                  for (int x = 0; x < pattern[y].length; x++) {
+                      int pixelX = startX + x + offsetX;
+                      int pixelY = startY + y + offsetY;
+                      if (pixelX >= imageWidth || pixelY >= imageHeight) {
+                          match = false;
+                          break;
+                      }
+                      int pixel = (image.getRGB(pixelX, pixelY) & 0xFF) == 0 ? 1 : 0;
+                      if (pixel != pattern[y][x]) {
+                          match = false;
+                          break;
+                      }
+                  }
+                  if (!match) break;
+              }
+              if (match) return true;
+          }
+      }
+      return false;
+  }
 }
