@@ -22,11 +22,11 @@ class OcrAlgorithm:
                 [1,1,1,1,0]
             ],
             'C': [
-                [0,1,1,1,0],
-                [1,0,0,0,1],
+                [0,1,1,1,1],
                 [1,0,0,0,0],
-                [1,0,0,0,1],
-                [0,1,1,1,0]
+                [1,0,0,0,0],
+                [1,0,0,0,0],
+                [0,1,1,1,1]
             ],
             'D': [
                 [1,1,1,1,0],
@@ -50,7 +50,7 @@ class OcrAlgorithm:
                 [1,0,0,0,0]
             ],
             'G': [
-                [0,1,1,1,0],
+                [0,1,1,1,1],
                 [1,0,0,0,0],
                 [1,0,1,1,1],
                 [1,0,0,0,1],
@@ -71,7 +71,7 @@ class OcrAlgorithm:
                 [1,1,1,1,1]
             ],
             'J': [
-                [0,0,0,0,1],
+                [0,0,0,1,1],
                 [0,0,0,0,1],
                 [0,0,0,0,1],
                 [1,0,0,0,1],
@@ -163,7 +163,7 @@ class OcrAlgorithm:
             ],
             'W': [
                 [1,0,0,0,1],
-                [1,0,0,0,1],
+                [1,0,1,0,1],
                 [1,0,1,0,1],
                 [1,1,0,1,1],
                 [1,0,0,0,1]
@@ -258,17 +258,196 @@ class OcrAlgorithm:
                 [0,1,1,1,1],
                 [0,0,0,0,1],
                 [0,1,1,1,0]
+            ],
+            'a': [
+                [0,0,0,0,0],
+                [0,1,1,1,0],
+                [0,0,0,0,1],
+                [0,1,1,1,1],
+                [0,1,1,1,1]
+            ],
+            'b': [
+                [1,0,0,0,0],
+                [1,0,0,0,0],
+                [1,1,1,1,0],
+                [1,0,0,0,1],
+                [1,1,1,1,0]
+            ],
+            'c': [
+                [0,0,0,0,0],
+                [0,1,1,1,0],
+                [1,0,0,0,0],
+                [1,0,0,0,0],
+                [0,1,1,1,0]
+            ],
+            'd': [
+                [0,0,0,1,0],
+                [0,0,0,1,0],
+                [0,1,1,1,0],
+                [1,0,0,1,0],
+                [0,1,1,1,0]
+            ],
+            'e': [
+                [0,0,0,0,0],
+                [0,1,1,1,0],
+                [1,0,0,0,1],
+                [1,1,1,1,0],
+                [0,1,1,1,0]
+            ],
+            'f': [
+                [0,0,1,1,0],
+                [0,1,0,0,0],
+                [1,1,1,1,0],
+                [0,1,0,0,0],
+                [0,1,0,0,0]
+            ],
+            'g': [
+                [0,1,1,1,1],
+                [1,0,0,0,1],
+                [0,1,1,1,1],
+                [0,0,0,0,1],
+                [0,1,1,1,0]
+            ],
+            'h': [
+                [1,0,0,0,0],
+                [1,0,0,0,0],
+                [1,1,1,1,0],
+                [1,0,0,0,1],
+                [1,0,0,0,1]
+            ],
+            'i': [
+                [0,0,1,0,0],
+                [0,0,0,0,0],
+                [0,0,1,0,0],
+                [0,0,1,0,0],
+                [0,0,1,0,0]
+            ],
+            'j': [
+                [0,0,0,1,0],
+                [0,0,0,0,0],
+                [0,0,0,1,0],
+                [1,0,0,1,0],
+                [0,1,1,0,0]
+            ],
+            'k': [
+                [1,0,0,0,0],
+                [1,0,0,1,0],
+                [1,0,1,0,0],
+                [1,1,0,1,0],
+                [1,0,0,1,0]
+            ],
+            'l': [
+                [0,1,1,0,0],
+                [0,0,1,0,0],
+                [0,0,1,0,0],
+                [0,0,1,0,0],
+                [0,1,1,1,0]
+            ],
+            'm': [
+                [0,0,0,0,0],
+                [1,1,0,1,0],
+                [1,0,1,0,1],
+                [1,0,1,0,1],
+                [1,0,1,0,1]
+            ],
+            'n': [
+                [0,0,0,0,0],
+                [1,1,1,1,0],
+                [1,0,0,0,1],
+                [1,0,0,0,1],
+                [1,0,0,0,1]
+            ],
+            'o': [
+                [0,0,0,0,0],
+                [0,1,1,1,0],
+                [1,0,0,0,1],
+                [1,0,0,0,1],
+                [0,1,1,1,0]
+            ],
+            'p': [
+                [1,1,1,1,0],
+                [1,0,0,0,1],
+                [1,1,1,1,0],
+                [1,0,0,0,0],
+                [1,0,0,0,0]
+            ],
+            'q': [
+                [0,1,1,1,1],
+                [1,0,0,0,1],
+                [0,1,1,1,1],
+                [0,0,0,0,1],
+                [0,0,0,0,1]
+            ],
+            'r': [
+                [0,0,0,0,0],
+                [1,0,1,1,0],
+                [1,1,0,0,1],
+                [1,0,0,0,0],
+                [1,0,0,0,0]
+            ],
+            's': [
+                [0,0,0,0,0],
+                [0,1,1,1,0],
+                [0,1,1,0,0],
+                [0,0,0,1,0],
+                [1,1,1,0,0]
+            ],
+            't': [
+                [0,1,0,0,0],
+                [1,1,1,1,0],
+                [0,1,0,0,0],
+                [0,1,0,0,1],
+                [0,0,1,1,0]
+            ],
+            'u': [
+                [0,0,0,0,0],
+                [1,0,0,0,1],
+                [1,0,0,0,1],
+                [1,0,0,1,1],
+                [0,1,1,0,1]
+            ],
+            'v': [
+                [0,0,0,0,0],
+                [1,0,0,0,1],
+                [1,0,0,0,1],
+                [0,1,0,1,0],
+                [0,0,1,0,0]
+            ],
+            'w': [
+                [0,0,0,0,0],
+                [1,0,0,0,1],
+                [1,0,1,0,1],
+                [1,0,1,0,1],
+                [0,1,0,1,0]
+            ],
+            'x': [
+                [0,0,0,0,0],
+                [1,0,0,0,1],
+                [0,1,1,1,0],
+                [0,1,1,1,0],
+                [1,0,0,0,1]
+            ],
+            'y': [
+                [1,0,0,0,1],
+                [1,0,0,0,1],
+                [0,1,1,1,1],
+                [0,0,0,0,1],
+                [0,1,1,1,0]
+            ],
+            'z': [
+                [0,0,0,0,0],
+                [1,1,1,1,1],
+                [0,0,1,1,0],
+                [0,1,1,0,0],
+                [1,1,1,1,1]
             ]
         }
         
     def preprocess_image(self, image_path):
-        # Load and convert image to grayscale
         image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
         
-        # Basic thresholding instead of adaptive
         _, binary_image = cv2.threshold(image, 127, 255, cv2.THRESH_BINARY)
         
-        # Invert if text is black on white
         if np.mean(binary_image) > 127:
             binary_image = cv2.bitwise_not(binary_image)
             
@@ -285,7 +464,7 @@ class OcrAlgorithm:
         regions = []
         for i in range(1, num_features + 1):
             region = (labeled_array == i)
-            if np.sum(region) > 20:
+            if np.sum(region) > 20: 
                 y, x = np.where(region)
                 regions.append({
                     'x': min(x),
@@ -296,60 +475,177 @@ class OcrAlgorithm:
                 })
 
         print(f"\nFound {len(regions)} potential characters.")
-        regions.sort(key=lambda r: r['x'])
+        
+        avg_height = np.mean([r['height'] for r in regions])
+        lines = []
+        current_line = []
+        
+        sorted_regions = sorted(regions, key=lambda r: r['y'])
+        
+        for i, region in enumerate(sorted_regions):
+            if not current_line:
+                current_line.append(region)
+            else:
+                prev_region = current_line[-1]
+                y_diff = abs(region['y'] - prev_region['y'])
+                
+                if y_diff <= avg_height * 0.5: 
+                    current_line.append(region)
+                else:
+                    lines.append(current_line)
+                    current_line = [region]
+                    
+        if current_line:
+            lines.append(current_line)
 
         recognized_text = []
-        prev_x_end = 0
-        avg_width = np.mean([r['width'] for r in regions])
         
-        for region in regions:
-            # Check for space
-            if prev_x_end > 0 and (region['x'] - prev_x_end) > 1.5 * avg_width:
-                recognized_text.append(' ')
+        for line in lines:            
+            line.sort(key=lambda r: r['x'])
             
-            char_image = binary_image[
-                region['y']:region['y'] + region['height'] + 1,
-                region['x']:region['x'] + region['width'] + 1
-            ]
+            line_text = []
             
-            # Ensure minimum size and padding
-            char_image = cv2.resize(char_image, (7, 7))
-            char_image = cv2.resize(char_image, (5, 5))
+            spacings = []
+            for i in range(len(line) - 1):
+                current_end = line[i]['x'] + line[i]['width']
+                next_start = line[i + 1]['x']
+                spacing = next_start - current_end
+                spacings.append(spacing)
             
-            # Normalize to binary values
-            char_image = (char_image > 127).astype(np.int32)
+            if spacings:
+                avg_spacing = np.mean(spacings)
+                std_spacing = np.std(spacings)
+                space_threshold = avg_spacing + std_spacing
+            else:
+                space_threshold = 20
+            
+            prev_end = None
+            
+            for region in line:              
+                if prev_end is not None:
+                    gap = region['x'] - prev_end
+                    if gap > space_threshold:
+                        line_text.append(' ')
+                
+                char_image = binary_image[
+                    region['y']:region['y'] + region['height'] + 1,
+                    region['x']:region['x'] + region['width'] + 1
+                ]
+                
+                char_image = cv2.resize(char_image, (10, 10))
+                char_image = cv2.resize(char_image, (5, 5))
+                
+                char_image = (char_image > 127).astype(np.int32)
 
-            char = self.recognize_character(char_image)
-            recognized_text.append(char)
-            prev_x_end = region['x'] + region['width']
-
-        result = ''.join(recognized_text)
-        print(f"\nFinal recognized text: {result}")
+                char = self.recognize_character(char_image)
+                
+                line_text.append(char)
+                prev_end = region['x'] + region['width']
+            
+            recognized_text.append(''.join(line_text))
+        
+        result = '\n'.join(recognized_text)
+        print(f"\nFinal recognized text:\n{result}")
         return result
 
     def calculate_match_score(self, window, pattern):
         pattern = np.array(pattern)
-        return np.sum(np.abs(window - pattern)) / 25  # Fixed size of 5x5
+        window = window.astype(float)
+        pattern = pattern.astype(float)
+        
+        weight_matrix = np.ones((5, 5))
+        weight_matrix[:, [0, 4]] = 2.5 
+        weight_matrix[:, [1, 3]] = 1.8 
+        weight_matrix[3:, 1:4] = 2.0 
+        
+        diff = np.abs(window - pattern)
+        weighted_diff = diff * weight_matrix
+        
+        try:
+            ssim_score = 1 - ssim(window, pattern, data_range=1.0, win_size=3)
+        except:
+            ssim_score = np.sum(diff) / 25.0
+        
+        combined_score = (0.7 * np.sum(weighted_diff) / (25 * np.mean(weight_matrix))) + (0.3 * ssim_score)
+        return combined_score
 
     def recognize_character(self, char_image):
         best_match = ' '
         best_score = float('inf')
+        
+        char_weights = {
+            'W': 0.75,
+            'V': 1.25,
+            'N': 1.15,
+            'M': 1.15,
+            'U': 1.20,
+            'T': 0.85,
+            'E': 0.85,
+            'S': 0.85,
+            'O': 0.90,
+            'R': 0.85,
+            'C': 0.75,
+            'A': 0.75,
+            'G': 0.80,
+            'B': 0.85,
+            'D': 0.85,
+            'F': 0.85,
+            'H': 0.85,
+            'I': 0.85,
+            'J': 0.85,
+            'K': 0.85,
+            'L': 0.85
+        }
 
-        for char, pattern in self.patterns.items():
+        candidates = []
+        for char, pattern in {k: v for k, v in self.patterns.items() 
+                            if k.isupper()}.items():
             score = self.calculate_match_score(char_image, pattern)
+            
+            if char in char_weights:
+                score *= char_weights[char]
+            
+            candidates.append((char, score))
+            
             if score < best_score:
                 best_score = score
                 best_match = char
 
-        # More lenient threshold
-        return best_match if best_score < 0.5 else ' '
+        if best_match in ['C', 'O']:
+            c_score = next((score for char, score in candidates if char == 'C'), float('inf'))
+            o_score = next((score for char, score in candidates if char == 'O'), float('inf'))
+            
+            left_side = char_image[:, 0]
+            right_side = char_image[:, -1]
+            
+            if np.sum(right_side) < np.sum(left_side) * 0.5:
+                best_match = 'C'
+                best_score = c_score
+            elif abs(np.sum(right_side) - np.sum(left_side)) < 2:
+                best_match = 'O'
+                best_score = o_score
+
+        if best_match in ['4', 'A']:
+            a_score = next((score for char, score in candidates if char == 'A'), float('inf'))
+            four_score = next((score for char, score in candidates if char == '4'), float('inf'))
+            if abs(a_score - four_score) < 0.2:
+                best_match = 'A'
+                best_score = a_score
+
+        if best_match == 'C':
+            threshold = 0.65
+        elif best_match in ['A', 'G']:
+            threshold = 0.6
+        else:
+            threshold = 0.5
+
+        return best_match if best_score < threshold else ' '
 
 
 def test_ocr():
-    """Test function to verify OCR functionality."""
     ocr = OcrAlgorithm()
     try:
-        text = ocr.extract_text("test_image.png")  # Replace with your test image
+        text = ocr.extract_text("9.png")
         print("Recognized text:")
         print(text)
     except Exception as e:
