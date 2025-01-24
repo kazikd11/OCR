@@ -1,0 +1,7 @@
+Pliki ktore dodalem to:
+OcrResult.java (nie uzywany)
+OcrAlgorithm.java
+OcrService.java
+ImageProcessor.java
+Main.java
+i testocr.png
