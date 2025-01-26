@@ -28,7 +28,7 @@ export const FileUpload = () => {
       const formData = new FormData();
       formData.append("file", newFile);
 
-      const response = await fetch("http://localhost:8080/ocr/upload", {
+      const response = await fetch("http://localhost:8000/ocr/upload/", {
         method: "POST",
         body: formData,
       });
@@ -38,7 +38,7 @@ export const FileUpload = () => {
       }
 
       const data = await response.json();
-      setProcessedText(data.text || "");
+      setProcessedText(data.message || "");
     } catch (error) {
       setError(
         `Wystąpił błąd: ${

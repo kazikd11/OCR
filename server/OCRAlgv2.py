@@ -247,13 +247,8 @@ class OcrAlgorithm:
         }
         
     def preprocess_image(self, image_path):
-        # Load and convert image to grayscale
         image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
-        
-        # Basic thresholding instead of adaptive
         _, binary_image = cv2.threshold(image, 127, 255, cv2.THRESH_BINARY)
-        
-        # Invert if text is black on white
         if np.mean(binary_image) > 127:
             binary_image = cv2.bitwise_not(binary_image)
             
@@ -264,7 +259,7 @@ class OcrAlgorithm:
         labeled_array, num_features = ndimage.label(binary_image)
 
         if num_features == 0:
-            print("No characters found in the image.")
+            print("No characters found")
             return ""
 
         regions = []
@@ -280,7 +275,6 @@ class OcrAlgorithm:
                     'region': region
                 })
 
-        print(f"\nFound {len(regions)} potential characters.")
         regions.sort(key=lambda r: (r['y'], r['x']))
 
         lines = self.group_by_lines(regions)
@@ -291,7 +285,7 @@ class OcrAlgorithm:
             recognized_text.append(line_text)
 
         result = '\n'.join(recognized_text)
-        print(f"\nFinal recognized text: {result}")
+        print(f"\nrecognized text: {result}")
         return result
 
     def group_by_lines(self, regions, line_threshold=10):
@@ -321,7 +315,6 @@ class OcrAlgorithm:
         avg_width = np.mean([r['width'] for r in line])
 
         for region in line:
-            # Check for space
             if prev_x_end > 0 and (region['x'] - prev_x_end) > 1.5 * avg_width:
                 recognized_text.append(' ')
             
@@ -330,10 +323,8 @@ class OcrAlgorithm:
                 region['x']:region['x'] + region['width'] + 1
             ]
             
-            # Ensure minimum size and padding
             char_image = cv2.resize(char_image, (5, 5))
             
-            # Normalize to binary values
             char_image = (char_image > 127).astype(np.int32)
 
             char = self.recognize_character(char_image)
@@ -344,7 +335,7 @@ class OcrAlgorithm:
 
     def calculate_match_score(self, window, pattern):
         pattern = np.array(pattern)
-        return np.sum(np.abs(window - pattern)) / (pattern.size)  # Adjust for new size
+        return np.sum(np.abs(window - pattern)) / (pattern.size)
 
     def recognize_character(self, char_image):
         best_match = ' '
@@ -356,19 +347,4 @@ class OcrAlgorithm:
                 best_score = score
                 best_match = char
 
-        # More lenient threshold
         return best_match if best_score < 0.5 else ' '
-
-
-def test_ocr():
-    """Test function to verify OCR functionality."""
-    ocr = OcrAlgorithm()
-    try:
-        text = ocr.extract_text("Test8.png")  # Replace with your test image
-        print("Recognized text:")
-        print(text)
-    except Exception as e:
-        print(f"Error during OCR: {str(e)}")
-
-if __name__ == "__main__":
-    test_ocr()
