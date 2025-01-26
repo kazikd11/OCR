@@ -2,7 +2,7 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.core.files.storage import default_storage
 import os
-from ocr_algorithm import OcrAlgorithm
+from OCRAlgv2 import OcrAlgorithm
 
 @csrf_exempt
 def upload_image(request):
