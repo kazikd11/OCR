@@ -1,0 +1,5 @@
+com/proj/ocr1/service/OcrService.class
+com/proj/ocr1/model/OcrResult.class
+com/proj/ocr1/ocr/OcrAlgorithm.class
+com/proj/ocr1/utils/ImageProcessor.class
+com/proj/ocr1/Main.class

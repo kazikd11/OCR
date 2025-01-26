@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\title{DOKUMENTACJA}
+\author{}
+\date{26 stycznia 2025r.}
+
+\begin{document}
+
+\maketitle
+
+\section{Co to}
+Projekt OCRaider to aplikacja webowa, która umożliwia konwersję dokumentów w formacie PNG na czytelny tekst. Aplikacja wykorzystuje algorytmy rozpoznawania tekstu (OCR) do przetwarzania obrazów i wydobywania z nich informacji tekstowych.
+
+\section{Jak działa}
+Aplikacja składa się z dwóch głównych części: frontend i backend. Frontend jest odpowiedzialny za interfejs użytkownika, w którym użytkownicy mogą przesyłać pliki do przetworzenia. Backend obsługuje logikę przetwarzania plików oraz komunikację z algorytmem OCR.
+
+\begin{enumerate}
+    \item Użytkownik przesyła plik graficzny za pomocą interfejsu frontendowego.
+    \item Plik jest wysyłany do backendu, gdzie jest przechowywany tymczasowo.
+    \item Backend przetwarza plik za pomocą algorytmu OCR, który analizuje obraz i wydobywa tekst.
+    \item Przetworzony tekst jest zwracany do frontendu, gdzie użytkownik może go zobaczyć i skopiować.
+\end{enumerate}
+
+\section{Jak uruchomić aplikację}
+Aby uruchomić aplikację, wykonaj poniższe kroki:
+
+\begin{enumerate}
+    \item **Klonowanie repozytorium**: Użyj poniższego polecenia, aby sklonować repozytorium na swój lokalny komputer:
+    \begin{verbatim}
+    git clone https://github.com/kazikd11/OCR/
+    \end{verbatim}
+    
+    \item **Instalacja zależności**: Przejdź do katalogu frontend i backend, a następnie zainstaluj wszystkie zależności:
+    \begin{verbatim}
+    Do odpalenia wymagany jest zainstalowany node.js oraz python.
+    
+    cd OCRaider/client
+    npm install
+    cd ../server
+    pip install -r requirements.txt
+    \end{verbatim}
+    
+    \item **Uruchamianie serwerów**: Uruchom serwery frontendowy i backendowy w osobnych terminalach:
+    \begin{itemize}
+        \item Dla frontendu:
+        \begin{verbatim}
+        cd OCRaider/client
+        npm run dev
+        \end{verbatim}
+        
+        \item Dla backendu:
+        \begin{verbatim}
+        cd OCRaider/server
+        python manage.py runserver
+        \end{verbatim}
+    \end{itemize}
+\end{enumerate}
+
+\section{Kto co robił}
+\begin{itemize}
+    \item \textbf{Frontend}: Michał Saturczak - odpowiedzialny za rozwój interfejsu użytkownika oraz integrację z backendem.
+    \item \textbf{Integracja frontu z backendem}: Michał Kaźmierczak - zajmował się połączeniem frontendowej części aplikacji z backendem.
+    \item \textbf{Serwer}: Michał Kaźmierczak - odpowiedzialny za konfigurację i zarządzanie serwerem.
+    \item \textbf{Algorytm OCR}: Mateusz Adamczyk i Patryk Hołubowicz - stworzyli algorytm rozpoznawania tekstu, który jest kluczowym elementem aplikacji.
+\end{itemize}
+
+\section{Co nie działa}
+W aplikacji występuje problem z rozpoznawaniem małych liter. Algorytm OCR nie jest w stanie poprawnie przetwarzać tych znaków, co wpływa na jakość rozpoznawanego tekstu.
+
+\end{document}

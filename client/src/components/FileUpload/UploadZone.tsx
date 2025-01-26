@@ -1,8 +1,8 @@
-import { useRef } from "react";
-import { motion } from "framer-motion";
 import { IconUpload } from "@tabler/icons-react";
-import { useDropzone } from "react-dropzone";
 import { cn } from "../../utils/utils";
+import { motion } from "framer-motion";
+import { useDropzone } from "react-dropzone";
+import { useRef } from "react";
 
 const mainVariant = {
   initial: { x: 0, y: 0 },

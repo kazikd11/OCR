@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { UploadZone } from "./FileUpload/UploadZone";
 import { ProcessingView } from "./FileUpload/ProcessingView";
 import { ResultView } from "./FileUpload/ResultView";
+import { UploadZone } from "./FileUpload/UploadZone";
+import { useState } from "react";
 
 export const FileUpload = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -15,7 +15,7 @@ export const FileUpload = () => {
 
     if (!fileExtension || !allowedExtensions.includes(fileExtension)) {
       setError(
-        "Nieprawidłowy format pliku. Dopuszczalne formaty: JPG, JPEG, PNG"
+        "Nieprawidłowy format pliku. Dopuszczalny format: PNG"
       );
       return;
     }
